@@ -91,9 +91,9 @@ class SetupPanel(wx.Panel):
         self.remote_remove_page_cb = None
 
         # page name entry box
-        self.pagesizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.pagesizer = wx.StaticBoxSizer(wx.HORIZONTAL, self, label="Page Setup")
         self.page_name_box = wx.TextCtrl(self, size=(100, -1))
-        self.pagesizer.Add(self.page_name_box, 0, wx.ALL | wx.ALIGN_CENTER, 5)
+        self.pagesizer.Add(self.page_name_box, 0, wx.ALL | wx.ALIGN_CENTER | wx.EXPAND, 5)
         self.add_page_button = wx.Button(self, label="Add Page")
         self.add_page_button.Bind(wx.EVT_BUTTON, self.add_page_cb)
         self.remove_page_button = wx.Button(self, label="Remove Page")
